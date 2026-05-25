@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Walk it off — Technischer Überblick</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: #f5f5f3;
+      color: #1a1a1a;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .header {
+      background: #1a1a1a;
+      color: #fff;
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 24px;
+    }
+
+    .header .label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 16px;
+      color: #aaa;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 36px;
+      margin-bottom: 16px;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card h2 .icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: #f0f0ee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 12px;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight {
+      background: #f7f7f5;
+      border-left: 3px solid #1a1a1a;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .cost-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .cost-item {
+      background: #f7f7f5;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .cost-item .amount {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .cost-item .amount.free {
+      color: #2d7a4f;
+    }
+
+    .cost-item .label {
+      font-size: 12px;
+      color: #888;
+      font-weight: 500;
+    }
+
+    .cost-item .sublabel {
+      font-size: 11px;
+      color: #aaa;
+      margin-top: 4px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #eef4ff;
+      color: #2563eb;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+      margin-top: 32px;
+    }
+
+    @media (max-width: 480px) {
+      .cost-grid { grid-template-columns: 1fr; }
+      .header { padding: 28px; }
+      .card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <div class="label">Technischer Überblick</div>
+      <h1>Walk it off</h1>
+      <p>Wie wir die App bauen — einfach erklärt</p>
+    </div>
+
+    <div class="card">
+      <div class="tag">Hintergrund</div>
+      <h2><span class="icon">📱</span> Was wir bauen</h2>
+      <p>
+        "Walk it off" ist eine mobile App für iPhone und Android. Die Idee: Menschen, die abnehmen wollen aber keinen Sport mögen, können durch regelmäßiges Gehen und bewusstes Essen ein Kaloriendefizit erreichen — ohne Fitnessstudio, ohne Laufschuhe.
+      </p>
+      <p>
+        Die App trackt Schritte, analysiert Mahlzeiten per Foto mit KI und zeigt täglich, ob man im Kaloriendefizit ist oder nicht. So einfach.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="tag">Technologie</div>
+      <h2><span class="icon">🛠</span> Was ist Expo?</h2>
+      <p>
+        Für die Entwicklung nutzen wir ein Werkzeug namens <strong>Expo</strong>. Normalerweise müsste man eine iPhone-App und eine Android-App komplett getrennt entwickeln — zwei verschiedene Programmiersprachen, doppelter Aufwand, doppelte Kosten.
+      </p>
+      <p>
+        Expo löst dieses Problem: Man schreibt den Code <strong>einmal</strong>, und er läuft automatisch auf beiden Plattformen.
+      </p>
+      <div class="highlight">
+        Während der Entwicklung kann die App jederzeit live auf dem eigenen Handy getestet werden — ohne komplizierte Einrichtung. Einfach eine kostenlose Hilfs-App installieren, QR-Code scannen, und die neueste Version läuft sofort auf dem Bildschirm.
+      </div>
+      <p>
+        Expo ist ein etabliertes, weit verbreitetes Werkzeug — genutzt von Tausenden Unternehmen und Entwicklern weltweit, von kleinen Nebenprojekten bis hin zu großen Produkten.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="tag">Kosten</div>
+      <h2><span class="icon">💶</span> Was kostet das?</h2>
+      <p>
+        Expo selbst ist als Open-Source-Software vollständig kostenlos. Für die gesamte Entwicklungsphase entstehen <strong>keine Kosten</strong>.
+      </p>
+      <p>
+        Sobald die App fertig ist und veröffentlicht werden soll, fallen Gebühren an — diese kommen jedoch von Apple und Google, nicht von Expo:
+      </p>
+
+      <div class="cost-grid">
+        <div class="cost-item">
+          <div class="amount free">Kostenlos</div>
+          <div class="label">Entwicklung</div>
+          <div class="sublabel">Unbegrenzt</div>
+        </div>
+        <div class="cost-item">
+          <div class="amount">99 €</div>
+          <div class="label">Apple App Store</div>
+          <div class="sublabel">Pro Jahr</div>
+        </div>
+        <div class="cost-item">
+          <div class="amount">25 €</div>
+          <div class="label">Google Play</div>
+          <div class="sublabel">Einmalig</div>
+        </div>
+      </div>
+
+      <p style="margin-top: 20px;">
+        Vor dem offiziellen Launch gibt es außerdem kostenlose Testmöglichkeiten (z. B. TestFlight von Apple), über die echte Nutzer die App testen können — bevor sie öffentlich wird.
+      </p>
+    </div>
+
+    <div class="footer">
+      Walk it off &mdash; Überblick erstellt Mai 2026
+    </div>
+
+  </div>
+</body>
+</html>
